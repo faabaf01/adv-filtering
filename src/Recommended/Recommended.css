@@ -1,6 +1,5 @@
-.recommended-flex {
-    display: flex;
-    margin-left: 20rem;
+.recommended-container {
+    margin-top: 8rem;
 }
 
 .recommended-title {
@@ -9,8 +8,12 @@
     margin-top: 20px;
     font-size: 20px;
     font-family: sans-serif;
-
 }
+.recommended-flex {
+    display: flex;
+    margin-left: 20rem;
+}
+
 
 .btns {
     padding: 10px 20px;

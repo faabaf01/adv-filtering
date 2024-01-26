@@ -2,7 +2,7 @@ import { BsFillBagHeartFill } from "react-icons/bs";
 
 function Card({ img, title, star, reviews, newPrice, prevPrice }) {
   return (
-    <section className="card">
+    <section className="card zoom">
       <img src={img} alt={title} className="card-img" />
       <div className="card-details">
         <h3 className="card-title">{title}</h3>

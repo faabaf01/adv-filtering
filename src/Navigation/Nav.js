@@ -1,11 +1,15 @@
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 import "./Nav.css";
 
 function Nav({ handleInputChange, query }) {
   return (
-    <nav>
+    <nav className="sticky">
+      <div className="logo-container">
+        <h1>🛒</h1>
+      </div>
       <div className="nav-container">
         <input
           type="text"
@@ -17,17 +21,17 @@ function Nav({ handleInputChange, query }) {
       </div>
 
       <div className="profile-container">
-        <a href="#">
+        <Link to="/favourite">
           <FiHeart className="nav-icons" />
-        </a>
+        </Link>
 
-        <a href="#">
+        <Link to="/cart">
           <AiOutlineShoppingCart className="nav-icons" />
-        </a>
+        </Link>
 
-        <a href="#">
+        <Link to="/account">
           <AiOutlineUserAdd className="nav-icons" />
-        </a>
+        </Link>
       </div>
     </nav>
   );

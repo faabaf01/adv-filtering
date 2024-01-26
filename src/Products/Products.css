@@ -1,6 +1,8 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px,270px)); */
     margin-left: 20rem;
     margin-top: 2rem;
     z-index: -2;
@@ -19,6 +21,15 @@
     height: 10rem; /* Set a fixed height for your images */
     object-fit: contain; 
     margin-bottom: 1rem;
+}
+.zoom {
+
+  transition: transform .2s; /* Animation */
+
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .card-title {

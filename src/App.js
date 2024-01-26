@@ -5,10 +5,12 @@ import Products from "./Products/Products";
 import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
 import "./index.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Database
 import products from "./db/data";
 import Card from "./components/Card";
+import Cart from "./pages/cart/cart";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -74,10 +76,25 @@ function App() {
 
   return (
     <>
-      <Sidebar handleChange={handleChange} />
-      <Navigation query={query} handleInputChange={handleInputChange} />
-      <Recommended handleClick={handleClick} />
-      <Products result={result} />
+      <Router>
+        <Navigation query={query} handleInputChange={handleInputChange} />
+
+        {/* <Products result={result} /> */}
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Sidebar handleChange={handleChange} />
+                <Recommended handleClick={handleClick} />
+                <Products result={result} />
+              </>
+            }
+          />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
     </>
   );
 }

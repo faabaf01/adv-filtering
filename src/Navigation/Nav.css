@@ -1,11 +1,20 @@
 nav {
     display: flex;
-    border-bottom: 2px solid #f3f3f3 ;
-    justify-content: space-around;
+    border-bottom: 5px solid #BADA55 ;
+    justify-content: space-between;
     align-items: center;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     z-index: 999;
-    margin-left: 2rem;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.logo-container {
+    margin-inline: 2rem;
 }
 
 input {
@@ -22,6 +31,6 @@ input {
 .nav-icons {
     width: 1.5rem;
     height: 1.5rem;
-    margin-left: 2rem;
+    margin-right: 2rem;
     color: #525252;
 }
