@@ -17,7 +17,7 @@ nav {
     margin-inline: 2rem;
 }
 
-input {
+.nav-container input {
     padding: 12px 20px;
     border: none;
     background: #f7f6f6;

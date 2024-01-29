@@ -7,9 +7,9 @@ import "./Nav.css";
 function Nav({ handleInputChange, query }) {
   return (
     <nav className="sticky">
-      <div className="logo-container">
+      <Link to="/" className="logo-container">
         <h1>🛒</h1>
-      </div>
+      </Link>
       <div className="nav-container">
         <input
           type="text"
