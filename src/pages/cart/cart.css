@@ -1,4 +1,12 @@
-.cart-container {
+.cart {
     margin-left: 10rem;
-    margin-top: 2rem;
+    margin-top: 10rem;
+}
+
+.item-img {
+    width: 13rem;
+    height: 10rem; /* Set a fixed height for the image */
+    object-fit: contain; 
+    margin-bottom: 1rem;
+
 }

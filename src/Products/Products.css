@@ -55,6 +55,15 @@
     justify-content: space-around;
     align-items: center;
 }
+.addToCartButton {
+    border: none;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
 
 .bag-icon {
     color: #535353;

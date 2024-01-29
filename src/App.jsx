@@ -5,6 +5,7 @@ import Products from "./Products/Products";
 import Recommended from "./Recommended/Recommended";
 import Sidebar from "./Sidebar/Sidebar";
 import "./index.css";
+import { ShopContextProvider } from "./context/shop-context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Database
@@ -58,9 +59,10 @@ function App() {
     }
 
     return filteredProducts.map(
-      ({ img, title, star, reviews, newPrice, prevPrice }) => (
+      ({ id, img, title, star, reviews, newPrice, prevPrice }) => (
         <Card
-          key={Math.random()}
+          key={id}
+          id={id}
           img={img}
           title={title}
           star={star}
@@ -76,25 +78,27 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navigation query={query} handleInputChange={handleInputChange} />
+      <ShopContextProvider>
+        <Router>
+          <Navigation query={query} handleInputChange={handleInputChange} />
 
-        {/* <Products result={result} /> */}
+          {/* <Products result={result} /> */}
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Sidebar handleChange={handleChange} />
-                <Recommended handleClick={handleClick} />
-                <Products result={result} />
-              </>
-            }
-          />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Sidebar handleChange={handleChange} />
+                  <Recommended handleClick={handleClick} />
+                  <Products result={result} />
+                </>
+              }
+            />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </Router>
+      </ShopContextProvider>
     </>
   );
 }

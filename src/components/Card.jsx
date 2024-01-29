@@ -1,6 +1,11 @@
-import { BsFillBagHeartFill } from "react-icons/bs";
+// import { BsFillBagHeartFill } from "react-icons/bs";
+import { useContext } from "react";
+import { ShopContext } from "../context/shop-context";
 
-function Card({ img, title, star, reviews, newPrice, prevPrice }) {
+function Card({ id, img, title, star, reviews, newPrice, prevPrice }) {
+  const { addToCart, cartItems } = useContext(ShopContext);
+
+  const cartItemAmount = cartItems[id];
   return (
     <section className="card zoom">
       <img src={img} alt={title} className="card-img" />
@@ -15,12 +20,14 @@ function Card({ img, title, star, reviews, newPrice, prevPrice }) {
         </section>
         <section className="card-price">
           <div className="price">
-            <del>{prevPrice}</del> {newPrice}
+            <del>{prevPrice}</del> ${newPrice}
           </div>
-
-          <div className="bag">
+          <button className="addToCartButton" onClick={() => addToCart(id)}>
+            Add To Cart {cartItemAmount > 0 && <>({cartItemAmount})</>}
+          </button>
+          {/* <div className="bag">
             <BsFillBagHeartFill className="bag-icon" />
-          </div>
+          </div> */}
         </section>
       </div>
     </section>
