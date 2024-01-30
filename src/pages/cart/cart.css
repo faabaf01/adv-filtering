@@ -1,11 +1,35 @@
 .cart {
     display: flex;
     flex-direction: column;
-    margin-left: 10rem;
     margin-top: 8rem;
-
+    align-items: center;
+    justify-content: center;
 }
 
+.cart-title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.cart h3 {
+    margin-top: 2rem;
+    color: rgb(172, 172, 172);
+}
+
+.cart-empty {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cart-empty-icon {
+    color: rgb(172, 172, 172);
+    width: 200px;
+    height: 200px;
+}
 .cartItem {
     height: 250px;
     width: 700px;
