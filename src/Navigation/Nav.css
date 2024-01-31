@@ -9,13 +9,14 @@ nav {
 }
 .sticky {
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
 }
   
 .logo-container {
     margin-inline: 2rem;
 }
+
 
 .nav-container input {
     padding: 12px 20px;
@@ -33,4 +34,8 @@ nav {
     height: 1.5rem;
     margin-right: 2rem;
     color: #525252;
+}
+
+.search-icon {
+margin-right: 10px;
 }
